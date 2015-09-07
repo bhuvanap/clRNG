@@ -1,81 +1,80 @@
-# clRNG Library
+﻿# clRNG Library
 
-A library for uniform random number generation in OpenCL.
+clRNG 1.0 is an OpenCL library that generates uniform random numbers. This library is
+now available as open-source on GitHub. The addition of the clRNG library improves the 
+coverage of OpenCL libraries available to developers.
 
-*Streams* of random numbers act as virtual random number generators.
-They can be created on the host computer in unlimited numbers, and then used 
-either on the host or on computing devices by work items to generate random numbers.
-Each stream also has equally-spaced substreams, which are occasionally useful.
-The API is currently implemented for four different RNGs, namely the 
-MRG31k3p, MRG32k3a, LFSR113 and Philox-4×32-10 generators.
 
-#### Documentation
+## Introduction
+
+So as to provide flexibility to develop and execute the application code, clRNG provides 
+interface to both the host and the device.The interfaces to the host are developed using 
+native C APIs. These interfaces appropriately allocate and initialize data structures used 
+on the device. This library can also generate random numbers in bulk, into a buffer, on a 
+request only from the host. The interfaces to the devices are developed using OpenCL C and 
+let you directly invoke the kernel interfaces from your OpenCL kernels for random 
+number requirements. 
+
+The clRNG library generates multiple streams—sequences of random numbers— and substreams 
+of random numbers for parallel applications and simulations. Currently, the library 
+implements four generators implemented in the library: MRG31k3p, MRG32k3a, LFSR113, and 
+Philox-based generator (Philox-4×32-10). 
+
+## Library semantic versioning
+
+This clRNG release is part of AMD Compute Libraries (ACL) 1.0 beta 1. It is currently a 
+beta release version v1.0.0. We expect developers to use it, evaluate it, and provide 
+feedback. We encourage and appreciate feedback on various aspects of the library, such 
+as the API design, functionality, implementation choices, and performance. Feedback 
+can be provided through the issue tracker on GitHub. Work on the library is in 
+progress and items planned for future versions are: addition of generic APIs that allow 
+users to switch easily between generators, support for Gaussian and other distributions, 
+and the development of C++ style kernel interfaces that OpenCL allows.
+
+The pre-built binaries are available here [***].
+
+#### clRNG library user documentation
 
 - [**HTML Documentation**  
   (generated with Doxygen)](http://clmathlibraries.github.io/clRNG/htmldocs/index.html)
-- [**Tutorial Document**  
+- [**Design Document**] - Provides the research paper:  
   *clRNG*: A Random Number API with Multiple Streams for OpenCL](http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf)
+that details the design methodology used in developing the API
 
-## Releases
+## Google Groups
 
-The first public version is v1.0.0 beta. Please go to [releases](https://github.com/clMathLibraries/clRNG/releases) for downloads.
+Two mailing lists have been created for the clMath projects:
 
-## Building
+•	clmath@googlegroups.com - group whose focus is to answer questions on using the library or reporting issues
+•	clmath-developers@googlegroups.com - group whose focus is for developers interested in contributing to the library code itself
 
-1.  Install the runtime dependency:
 
-      - An OpenCL SDK, such as [APP SDK](http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk/).
+## clRNG Wiki
 
-2.  Install the build dependencies:
+The project wiki contains helpful documentation, including a build primer.
 
-      - The [CMake](http://www.cmake.org/) cross-platform build system.
-        Visual Studio users can use [CMake Tools for Visual Studio](https://cmaketools.codeplex.com/).
-      - A recent C compiler, such as [GCC 4.9](https://gcc.gnu.org/), or Visual Studio 2013.
 
-3.  Get the [clRNG source code](https://github.com/clMathLibraries/clRNG).
+## Contributing code
 
-4.  Configure the project using CMake (to generate standard makefiles) or
-    CMake Tools for Visual Studio (to generate solution and project files).
+Please refer to and read the Contributing document for guidelines on how to contribute code to this open 
+source project. The code in the /master branch is considered to be stable, and all pull-requests should 
+be made against the /develop branch.
 
-5.  Build the project.
 
-6.  Install the project (by default, the library will be installed in the
-    `package` directory under the build directory).
+## License
 
-7.  Point the environment variable `CLRNG_ROOT` to the installation directory,
-    i.e., the directory that contains the `include` and `cl` subdirectories.
+The source for clRNG is licensed under BSD 2.0. 
 
-8.  In order to execute the example programs (under the `bin` subdirectory of
-    the installation directory) or to link clRNG into other software, the
-    dynamic linker must be informed where to find the clRNG shared library.
-    The name and location of the shared library generally depend on the platform.
-
-9.  Optionally run the tests.
-
-### Example Instructions for Linux
-
-On a 64-bit Linux platform, steps 3 through 9 from above, executed in a
-Bash-compatible shell, could consist of:
-
-    git clone https://github.com/clMathLibraries/clRNG.git
-    mkdir clRNG.build; cd clRNG.build; cmake ../clRNG/src
-    make
-    make install
-    export CLRNG_ROOT=$PWD/package
-    export LD_LIBRARY_PATH=$CLRNG_ROOT/lib64:$LD_LIBRARY_PATH
-    $CLRNG_ROOT/bin/CTest
 
 ## Examples
 
-Examples can be found in `src/client`.
-The compiled client program examples can be found under the `bin` subdirectory
-of the installation package (`$CLRNG_ROOT/bin` under Linux).
-Note that the examples expect an OpenCL GPU device to be available.
+On GitHub, a few examples for using clRNG library are available in `src/client`. Five sample programs are 
+included in the repository to illustrate how to use the library. Examples of the compiled client program 
+are available in the `bin` subdirectory of the installation package (`$CLRNG_ROOT/bin` under Linux). Note 
+that these examples require an OpenCL GPU device. 
 
-## Simple example
-
-The simple example below shows how to use clRNG to generate random numbers 
-by directly using device side headers (.clh) in your OpenCL kernel.
+The following example may be used as a quick reference to understand, how to use clRNG to generate random 
+numbers by directly using the device headers (.clh) in your OpenCL kernel.
 
 ```c
 #include <stdlib.h>
@@ -185,8 +184,28 @@ int main( void )
 }
 ```
 
+## Build dependencies
 
-## Building the documentation manually
+The following lists the build dependecies of the clRNG package:
 
-The documentation can be generated by running `make` from within the `doc`
-directory.  This requires Doxygen to be installed.
+### Library for Windows
+
+To develop the clRNG library code on a Windows operating system, ensure that the 
+following packages are installed on your system:
+
+- Windows(R) 7/8
+- Visual Studio 2012 or later
+- An OpenCL SDK, such as APP SDK 2.9
+- Latest CMake
+
+### Library for Linux
+
+To develop the clRNG library code on a Linux operating system, ensure that the 
+following packages are installed on your system:
+
+- GCC 4.6 and onwards
+- An OpenCL SDK, such as APP SDK 2.9
+- Latest CMake
+
+
+
