@@ -7,13 +7,13 @@ coverage of OpenCL libraries available to developers.
 
 ## Introduction
 
-So as to provide flexibility to develop and execute the application code, clRNG provides 
-interface to both the host and the device.The interfaces to the host are developed using 
-native C APIs. These interfaces appropriately allocate and initialize data structures used 
-on the device. This library can also generate random numbers in bulk, into a buffer, on a 
-request only from the host. The interfaces to the devices are developed using OpenCL C and 
-let you directly invoke the kernel interfaces from your OpenCL kernels for random 
-number requirements. 
+clRNG provides flexibility to develop and execute the application codes by providing 
+interfaces to both host and the device.The interfaces to the host are developed using 
+native C APIs. These interfaces appropriately allocate and initialize data structures 
+used on the device. This library generates random numbers in bulk and pushes them into 
+a buffer only on a request from the host. The interfaces to the devices are developed 
+using OpenCL C and let you directly invoke the kernel interfaces from your OpenCL kernels 
+for random number requirements. 
 
 The clRNG library generates multiple streams—sequences of random numbers— and substreams 
 of random numbers for parallel applications and simulations. Currently, the library 
@@ -31,7 +31,7 @@ progress and items planned for future versions are: addition of generic APIs tha
 users to switch easily between generators, support for Gaussian and other distributions, 
 and the development of C++ style kernel interfaces that OpenCL allows.
 
-The pre-built binaries are available here [***].
+The pre-built binaries are available here[https://github.com/clMathLibraries/clRNG/releases].
 
 #### clRNG library user documentation
 
@@ -45,18 +45,20 @@ that details the design methodology used in developing the API
 
 Two mailing lists have been created for the clMath projects:
 
-•	clmath@googlegroups.com - group whose focus is to answer questions on using the library or reporting issues
-•	clmath-developers@googlegroups.com - group whose focus is for developers interested in contributing to the library code itself
+-	[clmath@googlegroups.com][] - group whose focus is to answer questions on using the library or reporting issues
+-	[clmath-developers@googlegroups.com][] - group whose focus is for developers interested in contributing to the 
+library code itself
 
 
 ## clRNG Wiki
 
-The project wiki contains helpful documentation, including a build primer.
+The [project wiki][clmath@googlegroups.com] contains helpful documentation, including a [build primer][clmath-developers@googlegroups.com].
+
 
 
 ## Contributing code
 
-Please refer to and read the Contributing document for guidelines on how to contribute code to this open 
+Please refer to and read the [Contributing][] document for guidelines on how to contribute code to this open 
 source project. The code in the /master branch is considered to be stable, and all pull-requests should 
 be made against the /develop branch.
 
