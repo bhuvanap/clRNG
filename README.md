@@ -58,7 +58,7 @@ The [project wiki][clmath@googlegroups.com] contains helpful documentation, incl
 
 ## Contributing code
 
-Please refer to and read the [Contributing][] document for guidelines on how to contribute code to this open 
+Please refer to and read the [Contributing] document for guidelines on how to contribute code to this open 
 source project. The code in the /master branch is considered to be stable, and all pull-requests should 
 be made against the /develop branch.
 
