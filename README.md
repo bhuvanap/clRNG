@@ -17,7 +17,7 @@ for random number requirements.
 
 The clRNG library generates multiple streams—sequences of random numbers— and substreams 
 of random numbers for parallel applications and simulations. Currently, the library 
-implements four generators implemented in the library: MRG31k3p, MRG32k3a, LFSR113, and 
+implements four generators: MRG31k3p, MRG32k3a, LFSR113, and 
 Philox-based generator (Philox-4×32-10). 
 
 ## Library semantic versioning
@@ -45,10 +45,11 @@ that details the design methodology used in developing the API
 
 Two mailing lists have been created for the clMath projects:
 
--	[clmath@googlegroups.com] - group whose focus is to answer questions on using the library or reporting issues
--	[clmath-developers@googlegroups.com] - group whose focus is for developers interested in contributing to the 
-library code itself
+-   [clmath@googlegroups.com][] - group whose focus is to answer
+    questions on using the library or reporting issues
 
+-   [clmath-developers@googlegroups.com][] - group whose focus is for
+    developers interested in contributing to the library code itself
 
 ## clRNG Wiki
 
