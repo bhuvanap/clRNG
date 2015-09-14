@@ -53,8 +53,8 @@ Two mailing lists have been created for the clMath projects:
 
 ## clRNG Wiki
 
-The [project wiki][https://github.com/clMathLibraries/clRNG/wiki] contains helpful documentation, 
-including a [build primer][clmath-developers@googlegroups.com].
+The [project wiki][wiki_page] contains helpful documentation, 
+including a [build primer][wiki_build].
 
 ## Contributing code
 
@@ -214,6 +214,8 @@ following packages are installed on your system:
   [Doc_name]: http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf
   [clmath@googlegroups.com]: https://github.com/clMathLibraries/clRNG/wiki  
   [clmath-developers@googlegroups.com]: https://github.com/clMathLibraries/clRNG/wiki/Build 
+  [wiki_page]: https://github.com/clMathLibraries/clRNG/wiki]
+  [wiki_build]: https://github.com/clMathLibraries/clFFT/wiki/Build
 
 
  
