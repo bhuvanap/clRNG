@@ -35,11 +35,10 @@ The pre-built binaries are available [here][binary_release].
 
 #### clRNG library user documentation
 
-- [**HTML Documentation**  
-  (generated with Doxygen)](http://clmathlibraries.github.io/clRNG/htmldocs/index.html)
-- [**Design Document** - Provides the research paper:  
-  *clRNG*: A Random Number API with Multiple Streams for OpenCL](http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf)
-that details the design methodology used in developing the API
+- [**HTML Documentation**][html_document]generated with Doxygen 
+- [**Design Document**][Doc_name] - Provides the research paper:  
+  [*clRNG*: A Random Number API with Multiple Streams for OpenCL]that details 
+the design methodology used in developing the API
 
 ## Google Groups
 
@@ -211,4 +210,7 @@ following packages are installed on your system:
 - Latest CMake
 
   [binary_release]: https://github.com/clMathLibraries/clRNG/releases
+  [html_document]: http://clmathlibraries.github.io/clRNG/htmldocs/index.html
+  [Doc_name]: http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf   
 
+ 
