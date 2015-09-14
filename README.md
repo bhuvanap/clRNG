@@ -35,7 +35,9 @@ The pre-built binaries are available [here][binary_release].
 
 #### clRNG library user documentation
 
-- [**HTML Documentation**][html_document]generated with Doxygen 
+For more information on clRNG, you may refer the following links:
+
+- [**HTML Documentation**][html_document] generated with Doxygen 
 - [**Design Document**][Doc_name] - Provides the research paper:  
   [*clRNG*: A Random Number API with Multiple Streams for OpenCL]that details 
 the design methodology used in developing the API
@@ -211,6 +213,9 @@ following packages are installed on your system:
 
   [binary_release]: https://github.com/clMathLibraries/clRNG/releases
   [html_document]: http://clmathlibraries.github.io/clRNG/htmldocs/index.html
-  [Doc_name]: http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf   
+  [Doc_name]: http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf
+  [clmath@googlegroups.com]: https://github.com/clMathLibraries/clRNG/wiki  
+  [clmath-developers@googlegroups.com]: https://github.com/clMathLibraries/clRNG/wiki/Build 
+
 
  
