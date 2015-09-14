@@ -1,19 +1,19 @@
 ﻿# clRNG Library
 
-clRNG 1.0 is an OpenCL library that generates uniform random numbers. This library is
+clRNG is an OpenCL library that generates uniform random numbers. This library is
 now available as open-source on GitHub. The addition of the clRNG library improves the 
 coverage of OpenCL libraries available to developers.
 
 
 ## Introduction
 
-clRNG provides flexibility to develop and execute the application codes by providing 
-interfaces to both the host and the device.The interfaces to the host are developed using 
+clRNG offers flexibility in development of application code by providing 
+interfaces to both the host and the device. The interfaces to the host are developed using 
 native C APIs. These interfaces appropriately allocate and initialize data structures 
-used on the device. This library generates random numbers in bulk and pushes them into 
-a buffer only on a request from the host. The interfaces to the devices are developed 
+used on the device. The interfaces to the devices are developed 
 using OpenCL C and let you directly invoke the kernel interfaces from your OpenCL kernels 
-for random number requirements. 
+for random number requirements. This library can generate random numbers in bulk with just
+host interfaces.
 
 The clRNG library generates multiple streams—sequences of random numbers— and substreams 
 of random numbers for parallel applications and simulations. Currently, the library 
@@ -31,13 +31,13 @@ progress and items planned for future versions are: addition of generic APIs tha
 users to switch easily between generators, support for Gaussian and other distributions, 
 and the development of C++ style kernel interfaces that OpenCL allows.
 
-The pre-built binaries are available here[https://github.com/clMathLibraries/clRNG/releases].
+The pre-built binaries are available [here][binary_release].
 
 #### clRNG library user documentation
 
 - [**HTML Documentation**  
   (generated with Doxygen)](http://clmathlibraries.github.io/clRNG/htmldocs/index.html)
-- [**Design Document**] - Provides the research paper:  
+- [**Design Document** - Provides the research paper:  
   *clRNG*: A Random Number API with Multiple Streams for OpenCL](http://clmathlibraries.github.io/clRNG/docs/clrng-api.pdf)
 that details the design methodology used in developing the API
 
@@ -210,5 +210,5 @@ following packages are installed on your system:
 - An OpenCL SDK, such as APP SDK 2.9
 - Latest CMake
 
-
+  [binary_release]: https://github.com/clMathLibraries/clRNG/releases
 
