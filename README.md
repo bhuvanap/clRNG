@@ -38,7 +38,7 @@ The pre-built binaries are available [here][binary_release].
 For more information on clRNG, you may refer the following links:
 
 - [**HTML Documentation**][html_document] generated with Doxygen 
-- [**Design Document**][Doc_name] - Provides the research paper: [*clRNG*: A Random Number API with Multiple Streams for OpenCL] that details 
+- [**Design Document**][Doc_name] - Provides the research paper: "*clRNG*: A Random Number API with Multiple Streams for OpenCL" that details 
 the design methodology used in developing the API
 
 ## Google Groups
